@@ -1,27 +1,26 @@
 // utilizando o cifrão e abrindo o paretesse inicializamos o nosso jQuery
 
-$("#btnSelecionar").on("click", function(){  
-    
-    $("#data").val()
-    
-    $.ajax({
-         url:"https://api.nasa.gov/planetary/apod?api_key=bwEwY80LWIuDs7EmdAaxay3yyF2hr60HOLWpFztL&date=" +  $("#data").val(),
+$("#data").on("change", function () {
+  $("#data").val();
 
-        "success": function(resultado){
+  $.ajax({
+    url:
+      "https://api.nasa.gov/planetary/apod?api_key=bwEwY80LWIuDs7EmdAaxay3yyF2hr60HOLWpFztL&date=" +
+      $("#data").val(),
 
-                        
-            $("#textoContainer").html(`<p>${resultado.explanation}</p> <img src="${resultado.url}">`)
-
-           
+    success: function (resultado) {
+      $("#textoContainer").html(
+        `
+        <ul class='card'>
+            <li class='itens'><p class='texto'>${resultado.explanation}</p> </li>
+            <li class='itens'><img class='imgPrincipal' src="${resultado.url}"</li>
             
-            
-            console.log(resultado)
-        },
-       
+        </ul>
         
-    })
-    
+        >`
+      );
 
-})
-
-
+      console.log(resultado);
+    },
+  });
+});

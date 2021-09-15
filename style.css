@@ -1,11 +1,21 @@
 body{
+    background-image: url('https://images8.alphacoders.com/686/thumb-1920-686692.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-    background-color: aqua;
 }
 
-#frase{
-   
+#titulo{
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    font-style: italic;
     text-align:center;
+    
 }
 
 #textoContainer {
@@ -13,16 +23,55 @@ body{
     text-align: justify;
 }
 
-#dataConteiner{
 
+#data{
+    display: flex;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    border: 5px;
+    border-style: inset;
+    border-top-color: #3D12FF;
+    border-left-color: #6B10E3;
+    border-bottom-color:#B41EFA ;
+    border-right-color: #EB1FFA;
+    border-radius: 10px;
+
+}
+.card{
     width: 100%;
-    height: 60px;
-
+    height: 500px;
+    border: 5px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+.itens{
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 10px;
 
-    border: 5px solid black;
-    border-radius: 10px;
+    
 }
+
+.texto{
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    text-align: justify;
 }
+
+.imgPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+}
+
+
+
